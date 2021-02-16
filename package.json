@@ -1,0 +1,27 @@
+{
+  "name": "@domenic/eslint-config",
+  "description": "Domenic Denicola's base ESLint config",
+  "keywords": [
+    "eslint",
+    "lint",
+    "style"
+  ],
+  "version": "1.0.0-pre",
+  "author": "Domenic Denicola <d@domenic.me> (https://domenic.me/)",
+  "license": "Apache-2.0",
+  "repository": "domenic/eslint-config",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "eslint-find-rules --unused --deprecated"
+  },
+  "devDependencies": {
+    "eslint-find-rules": "^3.6.1",
+    "eslint": "^7.20.0"
+  },
+  "peerDependencies": {
+    "eslint": "^7.20.0"
+  }
+}
