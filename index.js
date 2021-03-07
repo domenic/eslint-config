@@ -177,7 +177,7 @@ module.exports = {
     "func-names": "off",
     "func-style": ["error", "declaration"],
     "function-call-argument-newline": ["error", "consistent"],
-    "function-paren-newline": ["error", "multiline"],
+    "function-paren-newline": ["error", "multiline-arguments"],
     "id-denylist": "off",
     "id-length": "off",
     "id-match": "off",
