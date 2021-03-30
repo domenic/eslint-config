@@ -56,7 +56,7 @@ module.exports = {
     "no-unsafe-negation": "error",
     "no-unsafe-optional-chaining": ["error", { disallowArithmeticOperators: true }],
     "no-useless-backreference": "error",
-    "require-atomic-updates": "error",
+    "require-atomic-updates": "off", // this is very broken: https://github.com/eslint/eslint/issues/11899
     "use-isnan": ["error", { enforceForIndexOf: true }],
     "valid-typeof": "error",
 
