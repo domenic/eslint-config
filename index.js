@@ -140,7 +140,7 @@ module.exports = {
     "require-unicode-regexp": "error",
     "vars-on-top": "off",
     "wrap-iife": ["error", "inside"],
-    "yoda": ["error", "never"],
+    "yoda": ["error", "never", { "exceptRange": true }],
 
     // Strict Mode
     strict: ["error", "global"],
