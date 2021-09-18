@@ -293,7 +293,7 @@ module.exports = {
     "no-var": "error",
     "object-shorthand": "error",
     "prefer-arrow-callback": "error",
-    "prefer-const": ["error", { ignoreReadBeforeAssign: true }],
+    "prefer-const": ["error", { ignoreReadBeforeAssign: true, destructuring: "all" }],
     "prefer-destructuring": [
       "error",
       {
