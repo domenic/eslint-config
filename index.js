@@ -55,6 +55,7 @@ module.exports = {
     "no-unsafe-finally": "off",
     "no-unsafe-negation": "error",
     "no-unsafe-optional-chaining": ["error", { disallowArithmeticOperators: true }],
+    "no-unused-private-class-members": "error",
     "no-useless-backreference": "error",
     "require-atomic-updates": "off", // this is very broken: https://github.com/eslint/eslint/issues/11899
     "use-isnan": ["error", { enforceForIndexOf: true }],
@@ -133,6 +134,7 @@ module.exports = {
     "no-warning-comments": "off",
     "no-with": "error",
     "prefer-named-capture-group": "off",
+    "prefer-object-has-own": "error",
     "prefer-promise-reject-errors": "error",
     "prefer-regex-literals": ["error", { disallowRedundantWrapping: true }],
     "radix": ["error", "as-needed"],
