@@ -1,9 +1,4 @@
-"use strict";
-
-module.exports = {
-  env: {
-    es2021: true,
-  },
+export default [{
   rules: {
     // Possible problems
     "array-callback-return": "error",
@@ -329,4 +324,4 @@ module.exports = {
     "wrap-regex": "off",
     "yield-star-spacing": ["error", "after"],
   },
-};
+}];
