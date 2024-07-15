@@ -59,7 +59,7 @@ export default [{
     "no-unused-vars": "error",
     "no-use-before-define": ["error", { functions: false }],
     "no-useless-backreference": "error",
-    "require-atomic-updates": "off", // this is very broken: https://github.com/eslint/eslint/issues/11899
+    "require-atomic-updates": "error",
     "use-isnan": ["error", { enforceForIndexOf: true }],
     "valid-typeof": "error",
 
