@@ -10,18 +10,14 @@
   "author": "Domenic Denicola <d@domenic.me> (https://domenic.me/)",
   "license": "Apache-2.0",
   "repository": "domenic/eslint-config",
-  "main": "index.js",
+  "main": "index.mjs",
   "files": [
-    "index.js"
+    "index.mjs"
   ],
-  "scripts": {
-    "test": "eslint-find-rules --unused --deprecated"
-  },
   "devDependencies": {
-    "eslint": "^8.28.0",
-    "eslint-find-rules": "^4.1.0"
+    "eslint": "^9.7.0"
   },
   "peerDependencies": {
-    "eslint": "^8.28.0"
+    "eslint": "^9.7.0"
   }
 }
