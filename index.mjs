@@ -220,7 +220,7 @@ export default [{
     "prefer-template": "error",
     "quote-props": ["error", "consistent-as-needed"],
     "radix": ["error", "as-needed"],
-    "require-await": "error",
+    "require-await": "off", // throwing being converted to rejections is too useful
     "require-unicode-regexp": "error",
     "require-yield": "error",
     "sort-imports": "off",
