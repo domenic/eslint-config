@@ -1,0 +1,25 @@
+name: Check ESLint Rules Coverage
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-rules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: latest
+
+      - run: npm ci
+
+      - name: Check core ESLint rules
+        run: npm run check-rules
+
+      - name: Check @stylistic rules
+        run: npm run check-rules:stylistic

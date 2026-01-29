@@ -13,14 +13,30 @@
     "type": "git",
     "url": "git+https://github.com/domenic/eslint-config.git"
   },
-  "main": "index.mjs",
+  "type": "module",
+  "exports": {
+    ".": "./index.mjs",
+    "./stylistic": "./stylistic.mjs"
+  },
   "files": [
-    "index.mjs"
+    "index.mjs",
+    "stylistic.mjs"
   ],
+  "scripts": {
+    "check-rules": "node scripts/check-rules.mjs ./index.mjs",
+    "check-rules:stylistic": "node scripts/check-rules.mjs ./stylistic.mjs --stylistic"
+  },
   "devDependencies": {
-    "eslint": "^9.7.0"
+    "@stylistic/eslint-plugin": "^5.7.1",
+    "eslint": "^9.39.2"
   },
   "peerDependencies": {
-    "eslint": "^9.7.0"
+    "@stylistic/eslint-plugin": "^5.7.1",
+    "eslint": "^9.39.2"
+  },
+  "peerDependenciesMeta": {
+    "@stylistic/eslint-plugin": {
+      "optional": true
+    }
   }
 }
