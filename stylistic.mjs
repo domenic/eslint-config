@@ -118,6 +118,7 @@ export default [{
     "@stylistic/yield-star-spacing": ["error", "after"],
 
     // JSX (off by default)
+    "@stylistic/exp-jsx-props-style": "off",
     "@stylistic/jsx-child-element-spacing": "off",
     "@stylistic/jsx-closing-bracket-location": "off",
     "@stylistic/jsx-closing-tag-location": "off",

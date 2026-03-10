@@ -27,12 +27,12 @@
     "check-rules:stylistic": "node scripts/check-rules.mjs ./stylistic.mjs --stylistic"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin": "^5.7.1",
-    "eslint": "^9.39.2"
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.0.3"
   },
   "peerDependencies": {
-    "@stylistic/eslint-plugin": "^5.7.1",
-    "eslint": "^9.39.2"
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.0.3"
   },
   "peerDependenciesMeta": {
     "@stylistic/eslint-plugin": {
