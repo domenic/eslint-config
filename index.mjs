@@ -203,7 +203,7 @@ export default [{
     "prefer-spread": "error",
     "prefer-template": "error",
     "preserve-caught-error": "error",
-    "radix": ["error", "as-needed"],
+    "radix": "error",
     "require-await": "off", // throwing being converted to rejections is too useful
     "require-unicode-regexp": "error",
     "require-yield": "error",
