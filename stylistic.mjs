@@ -44,7 +44,7 @@ export default [{
     "@stylistic/keyword-spacing": ["error", { before: true, after: true }],
     "@stylistic/line-comment-position": "off",
     "@stylistic/linebreak-style": ["error", "unix"],
-    "@stylistic/lines-around-comment": "error",
+    "@stylistic/lines-around-comment": "off",
     "@stylistic/lines-between-class-members": "off",
     "@stylistic/max-len": ["error", 120, { ignoreUrls: true }],
     "@stylistic/max-statements-per-line": ["error", { max: 1 }],
