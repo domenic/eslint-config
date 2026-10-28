@@ -10,9 +10,9 @@ jobs:
   check-rules:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: latest
 
@@ -23,3 +23,6 @@ jobs:
 
       - name: Check @stylistic rules
         run: npm run check-rules:stylistic
+
+      - name: Check formatting
+        run: npm run format:check
