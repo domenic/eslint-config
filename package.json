@@ -23,10 +23,11 @@
     "./stylistic": "./stylistic.mjs"
   },
   "scripts": {
-    "check-rules": "node scripts/check-rules.mjs ./index.mjs",
-    "check-rules:stylistic": "node scripts/check-rules.mjs ./stylistic.mjs --stylistic",
-    "format": "oxfmt",
-    "format:check": "oxfmt --check"
+    "check": "npm run check:rules && npm run check:rules:stylistic && npm run fmt:check",
+    "check:rules": "node scripts/check-rules.mjs ./index.mjs",
+    "check:rules:stylistic": "node scripts/check-rules.mjs ./stylistic.mjs --stylistic",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "^5.10.0",
