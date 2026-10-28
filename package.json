@@ -1,34 +1,37 @@
 {
   "name": "@domenic/eslint-config",
+  "version": "5.1.0",
   "description": "Domenic Denicola's base ESLint config",
   "keywords": [
     "eslint",
     "lint",
     "style"
   ],
-  "version": "5.1.0",
-  "author": "Domenic Denicola <d@domenic.me> (https://domenic.me/)",
   "license": "Apache-2.0",
+  "author": "Domenic Denicola <d@domenic.me> (https://domenic.me/)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/domenic/eslint-config.git"
-  },
-  "type": "module",
-  "exports": {
-    ".": "./index.mjs",
-    "./stylistic": "./stylistic.mjs"
   },
   "files": [
     "index.mjs",
     "stylistic.mjs"
   ],
+  "type": "module",
+  "exports": {
+    ".": "./index.mjs",
+    "./stylistic": "./stylistic.mjs"
+  },
   "scripts": {
     "check-rules": "node scripts/check-rules.mjs ./index.mjs",
-    "check-rules:stylistic": "node scripts/check-rules.mjs ./stylistic.mjs --stylistic"
+    "check-rules:stylistic": "node scripts/check-rules.mjs ./stylistic.mjs --stylistic",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check"
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "^5.10.0",
-    "eslint": "^10.0.3"
+    "eslint": "^10.0.3",
+    "oxfmt": "0.75.0"
   },
   "peerDependencies": {
     "@stylistic/eslint-plugin": "^5.10.0",

@@ -29,7 +29,7 @@ if (checkStylistic) {
   // For stylistic, load the plugin and check its rules
   const stylistic = (await import("@stylistic/eslint-plugin")).default;
   allRules = new Map(
-    Object.entries(stylistic.rules).map(([name, rule]) => [`@stylistic/${name}`, rule])
+    Object.entries(stylistic.rules).map(([name, rule]) => [`@stylistic/${name}`, rule]),
   );
 } else {
   // For core ESLint rules
@@ -52,7 +52,7 @@ for (const [ruleName, rule] of allRules) {
   const isDeprecated = rule.meta.deprecated;
 
   if (isDeprecated && isConfigured) {
-    const replacedBy = isDeprecated.replacedBy?.map(r => r.rule.name).join(", ") || "none";
+    const replacedBy = isDeprecated.replacedBy?.map((r) => r.rule.name).join(", ") || "none";
     deprecatedRules.push({ name: ruleName, replacedBy });
   }
 
@@ -80,7 +80,9 @@ if (unusedRules.length > 0) {
 }
 
 if (exitCode === 0) {
-  console.log(`\n✅ All ${checkStylistic ? "@stylistic" : "core ESLint"} rules are configured and none are deprecated.\n`);
+  console.log(
+    `\n✅ All ${checkStylistic ? "@stylistic" : "core ESLint"} rules are configured and none are deprecated.\n`,
+  );
 }
 
 process.exit(exitCode);
