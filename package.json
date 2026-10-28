@@ -30,12 +30,12 @@
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "^5.10.0",
-    "eslint": "^10.0.3",
+    "eslint": "^10.13.0",
     "oxfmt": "0.75.0"
   },
   "peerDependencies": {
     "@stylistic/eslint-plugin": "^5.10.0",
-    "eslint": "^10.0.3"
+    "eslint": "^10.13.0"
   },
   "peerDependenciesMeta": {
     "@stylistic/eslint-plugin": {
