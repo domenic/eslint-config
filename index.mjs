@@ -47,7 +47,7 @@ export default [
       "no-unassigned-vars": "error",
       "no-undef": "error",
       "no-unexpected-multiline": "off", // oxfmt can wrap before computed property access
-      "no-unmodified-loop-condition": ["error", { checkConditionalExpressions: true }],
+      "no-unmodified-loop-condition": "error",
       "no-unreachable": "error",
       "no-unreachable-loop": "error",
       "no-unsafe-finally": "off",
