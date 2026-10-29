@@ -3,15 +3,28 @@
 // Check for unused and deprecated ESLint rules in a flat config file.
 // Usage: node scripts/check-rules.mjs [configFile] [--stylistic]
 
+import path from "node:path";
+import { pathToFileURL } from "node:url";
+import { parseArgs } from "node:util";
+
 // This is ESLint's official "advanced API" for tooling that needs to introspect rules.
 // The name is intentionally scary but it's documented for this use case.
 import { builtinRules } from "eslint/use-at-your-own-risk";
 
-const configFile = process.argv[2] || "./index.mjs";
-const checkStylistic = process.argv.includes("--stylistic");
+const { values, positionals } = parseArgs({
+  options: {
+    stylistic: { type: "boolean", default: false },
+  },
+  allowPositionals: true,
+});
+if (positionals.length > 1) {
+  throw new Error("Expected at most one config filename.");
+}
+const checkStylistic = values.stylistic;
+const configFile = positionals[0] ?? (checkStylistic ? "./stylistic.mjs" : "./index.mjs");
 
 // Load the config
-const config = (await import(`file://${process.cwd()}/${configFile}`)).default;
+const config = (await import(pathToFileURL(path.resolve(configFile)).href)).default;
 
 // Collect all configured rules from all config objects
 const configuredRules = new Set();
